@@ -1532,24 +1532,6 @@ texture = ExtResource("1_h64s2")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6vre"]
 resource_name = "Trees_grass_decorates"
 texture = ExtResource("3_7mr3g")
-14:41/0 = 0
-14:41/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-14:41/0/physics_layer_0/angular_velocity = 0.0
-15:41/0 = 0
-15:41/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-15:41/0/physics_layer_0/angular_velocity = 0.0
-16:41/0 = 0
-16:41/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-16:41/0/physics_layer_0/angular_velocity = 0.0
-16:42/0 = 0
-16:42/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-16:42/0/physics_layer_0/angular_velocity = 0.0
-15:42/0 = 0
-15:42/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-15:42/0/physics_layer_0/angular_velocity = 0.0
-14:42/0 = 0
-14:42/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-14:42/0/physics_layer_0/angular_velocity = 0.0
 19:33/0 = 0
 19:33/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 19:33/0/physics_layer_0/angular_velocity = 0.0
@@ -1952,6 +1934,10 @@ texture = ExtResource("3_7mr3g")
 22:45/0 = 0
 22:45/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 22:45/0/physics_layer_0/angular_velocity = 0.0
+14:41/size_in_atlas = Vector2i(3, 2)
+14:41/0 = 0
+14:41/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:41/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3p01"]
 resource_name = "Trees"
