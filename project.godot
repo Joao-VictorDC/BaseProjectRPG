@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BaseProject"
-run/main_scene="res://scenes/Teste_level.tscn"
+run/main_scene="res://scenes/Main_Level.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 
 [display]

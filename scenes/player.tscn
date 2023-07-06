@@ -384,7 +384,6 @@ shape = SubResource("CircleShape2D_3xuff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m38is")
-animation = &"WalkRight"
-frame_progress = 0.559094
+animation = &"WalkLeft"
 
 [node name="Camera2D" type="Camera2D" parent="."]
