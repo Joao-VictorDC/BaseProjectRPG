@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://0rwyga7wpu6"]
+[gd_scene load_steps=4 format=3 uid="uid://0rwyga7wpu6"]
 
+[ext_resource type="PackedScene" uid="uid://0x3t2kqbn3ho" path="res://scenes/gui.tscn" id="1_8dwbg"]
 [ext_resource type="PackedScene" uid="uid://bldsiyb5485pe" path="res://scenes/terrains.tscn" id="1_e4pmo"]
 [ext_resource type="PackedScene" uid="uid://gi2poehk3spu" path="res://scenes/player.tscn" id="2_8ulao"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="GUI" parent="." instance=ExtResource("1_8dwbg")]
 
 [node name="Player" parent="." instance=ExtResource("2_8ulao")]
 y_sort_enabled = true
