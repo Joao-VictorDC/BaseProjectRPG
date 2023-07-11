@@ -37,7 +37,7 @@ func player_moviment(delta):
 func updateAnimation():
 	var state = "Idle"
 	
-	if velocity.length() > 10:
+	if velocity.lengt() > 10:
 		state = "Walk"
 	if velocity.length() == 0:
 		state = "Idle"
