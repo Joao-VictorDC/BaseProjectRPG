@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv5prvqgw48xt"]
+
+[ext_resource type="Script" path="res://scenes/Trash.gd" id="1_h7p77"]
+[ext_resource type="Texture2D" uid="uid://dwgvoox4px6g2" path="res://assets/GUI/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Banner_01_Upward.png" id="2_prx4o"]
+[ext_resource type="Script" path="res://script/Trash.gd" id="3_lvayg"]
+[ext_resource type="Texture2D" uid="uid://btdn87oohmxda" path="res://assets/GUI/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Button_Large_Lock_01a1.png" id="4_20t3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnyq0"]
+size = Vector2(102, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_an86g"]
+size = Vector2(93, 29)
+
+[node name="RecycleBin" type="Node2D"]
+position = Vector2(140, 76)
+
+[node name="Trash" type="CharacterBody2D" parent="."]
+script = ExtResource("1_h7p77")
+
+[node name="Sprite2D" type="Sprite2D" parent="Trash"]
+texture = ExtResource("2_prx4o")
+
+[node name="Area2D" type="Area2D" parent="Trash"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trash/Area2D"]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_wnyq0")
+
+[node name="RecycleBin" type="CharacterBody2D" parent="."]
+position = Vector2(118, -34)
+script = ExtResource("3_lvayg")
+
+[node name="Sprite2D" type="Sprite2D" parent="RecycleBin"]
+texture = ExtResource("4_20t3m")
+
+[node name="Area2D" type="Area2D" parent="RecycleBin"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecycleBin/Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_an86g")
+
+[connection signal="input_event" from="Trash/Area2D" to="Trash" method="_on_area_2d_input_event"]
+[connection signal="area_entered" from="RecycleBin/Area2D" to="RecycleBin" method="_on_area_2d_area_entered"]

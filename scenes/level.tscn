@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://djiqhewprtqtg"]
+
+[ext_resource type="PackedScene" uid="uid://gi2poehk3spu" path="res://scenes/player.tscn" id="1_ibv4h"]
+[ext_resource type="Script" path="res://level.gd" id="1_mhcic"]
+[ext_resource type="PackedScene" uid="uid://bldsiyb5485pe" path="res://scenes/terrains.tscn" id="2_r7spl"]
+[ext_resource type="PackedScene" uid="uid://c4bhqh70vo3jr" path="res://scenes/enemy.tscn" id="3_hbrmg"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_mhcic")
+
+[node name="Player" parent="." instance=ExtResource("1_ibv4h")]
+
+[node name="terrains" parent="." instance=ExtResource("2_r7spl")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_hbrmg")]

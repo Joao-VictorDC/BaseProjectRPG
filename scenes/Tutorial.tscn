@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj8jpa2nvgerw"]
+
+[ext_resource type="Script" path="res://script/Tutorial.gd" id="1_usm4a"]
+[ext_resource type="Texture2D" uid="uid://ddc7laic2i264" path="res://assets/GUI/images/menu-background.jpg" id="2_77c7l"]
+[ext_resource type="FontFile" uid="uid://db4k7uakvesrw" path="res://assets/fonts/Minecraft.ttf" id="3_httk2"]
+[ext_resource type="Texture2D" uid="uid://dru0qfwgf7ja0" path="res://assets/GUI/keysword_E.png" id="4_lqchf"]
+[ext_resource type="Texture2D" uid="uid://kt8pjm0of2qc" path="res://assets/GUI/keys_arrows_pictures.png" id="5_3aaiq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+script = ExtResource("1_usm4a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -160.0
+offset_top = -135.0
+offset_right = 160.0
+offset_bottom = 64.0
+texture = ExtResource("2_77c7l")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = -37.0
+offset_top = 7.0
+offset_right = 36.0
+offset_bottom = 38.0
+alignment = 2
+
+[node name="BackBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "VOLTAR"
+
+[node name="Title" type="Label" parent="."]
+modulate = Color(0.396078, 0.345098, 0.92549, 1)
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = -134.0
+offset_right = 78.0
+offset_bottom = -93.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_httk2")
+theme_override_font_sizes/font_size = 20
+text = "Como jogar
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyword_E" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = -92.0
+offset_right = 268.0
+offset_bottom = 133.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_lqchf")
+
+[node name="Keyword_E_text" type="Label" parent="."]
+modulate = Color(0.396078, 0.345098, 0.92549, 1)
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 22.0
+offset_top = -20.0
+offset_right = 179.0
+offset_bottom = 9.0
+grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("3_httk2")
+theme_override_font_sizes/font_size = 20
+text = "E para interagir
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyword_Arrows" type="TextureRect" parent="."]
+offset_left = -112.0
+offset_top = -92.0
+offset_right = 113.0
+offset_bottom = 133.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_3aaiq")
+
+[node name="Keyword_Arrows_text" type="Label" parent="."]
+modulate = Color(0.396078, 0.345098, 0.92549, 1)
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = -21.0
+offset_right = 25.0
+offset_bottom = 8.0
+grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("3_httk2")
+theme_override_font_sizes/font_size = 20
+text = "E para interagir
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/BackBtn" to="." method="_on_quit_btn_pressed" flags=18]
+[connection signal="pressed" from="VBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
