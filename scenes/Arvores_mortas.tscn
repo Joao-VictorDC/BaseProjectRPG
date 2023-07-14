@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42c54pkhm1kr"]
+
+[ext_resource type="Script" path="res://script/Arvores_mortas.gd" id="1_hdpqs"]
+[ext_resource type="PackedScene" uid="uid://bldsiyb5485pe" path="res://scenes/terrains.tscn" id="2_5710u"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-1, -5)
+script = ExtResource("1_hdpqs")
+
+[node name="arvores_mortas" parent="." instance=ExtResource("2_5710u")]
+layer_4/tile_data = PackedInt32Array(1310739, 393220, 72, 1441811, 393220, 72, 1572883, 393220, 72, 1376276, 393220, 72)
+
+[node name="arvore_limpa" parent="." instance=ExtResource("2_5710u")]
+visible = false
+layer_4/tile_data = PackedInt32Array(1507361, 262148, 74, 1638432, 262148, 74, 1572898, 262148, 74, 1572899, 262148, 74, 1507363, 262148, 74, 1703970, 262148, 74)
