@@ -23,6 +23,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
+		execute_interaction()
 	
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -74,8 +75,15 @@ func update_interactions():
 func execute_interaction():
 	if all_interactions:
 		var cur_interacion = all_interactions[0]
+		cur_interacion.interact_value = cur_interacion.interact_value + 1
+		if cur_interacion.interact_value == 1:
+			get_parent().get_node("Objects/arvores_mortas1/object").queue_free()
+			
+		if cur_interacion.interact_value == 2:
+			get_parent().get_node("Objects/arvores_mortas1/arvore_limpa").show()
+			
 		match cur_interacion.interact_type:
-			"recycle_bin_scene" : get_tree().change_scene_to_file("res://scenes/menu.tscn")
+			"growth_tree" : pass
 	
 	
 		
