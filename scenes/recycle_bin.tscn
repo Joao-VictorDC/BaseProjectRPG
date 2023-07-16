@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=3 uid="uid://bv5prvqgw48xt"]
 
 [ext_resource type="Script" path="res://scenes/Trash.gd" id="1_h7p77"]
 [ext_resource type="Texture2D" uid="uid://dwgvoox4px6g2" path="res://assets/GUI/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Banner_01_Upward.png" id="2_prx4o"]
 [ext_resource type="Script" path="res://script/Trash.gd" id="3_lvayg"]
 [ext_resource type="Texture2D" uid="uid://btdn87oohmxda" path="res://assets/GUI/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Button_Large_Lock_01a1.png" id="4_20t3m"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://bv5prvqgw48xt"]
+
+[ext_resource type="Script" path="res://scenes/Trash.gd" id="1_h7p77"]
+[ext_resource type="Script" path="res://script/Trash.gd" id="3_lvayg"]
+>>>>>>> cd0cb1dcbdc0d500d069f5f8fcfb5aa8f5e2ed7c
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnyq0"]
 size = Vector2(102, 22)
@@ -18,7 +25,10 @@ position = Vector2(140, 76)
 script = ExtResource("1_h7p77")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trash"]
+<<<<<<< HEAD
 texture = ExtResource("2_prx4o")
+=======
+>>>>>>> cd0cb1dcbdc0d500d069f5f8fcfb5aa8f5e2ed7c
 
 [node name="Area2D" type="Area2D" parent="Trash"]
 
@@ -31,7 +41,10 @@ position = Vector2(118, -34)
 script = ExtResource("3_lvayg")
 
 [node name="Sprite2D" type="Sprite2D" parent="RecycleBin"]
+<<<<<<< HEAD
 texture = ExtResource("4_20t3m")
+=======
+>>>>>>> cd0cb1dcbdc0d500d069f5f8fcfb5aa8f5e2ed7c
 
 [node name="Area2D" type="Area2D" parent="RecycleBin"]
 

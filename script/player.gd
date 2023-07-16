@@ -7,13 +7,17 @@ extends CharacterBody2D
 @export var max_speed = 75
 @export var accel = 600
 @export var friction = 600
+@export var max_task: int = 0
 
 @onready var all_interactions = []
 @onready var interaction_label = $Interaction_Component/InteractionLabel
 
+var task: int = 0
+
 var input = Vector2.ZERO
 
 func _ready():
+	$Task_number.text = str("Atividades concluídas: ", str(task).pad_zeros(2), "/"+str(max_task).pad_zeros(2))
 	update_interactions()
 	
 
@@ -23,6 +27,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
+		execute_interaction()
+		
+	if task == max_task:
+		get_tree().change_scene_to_file("res://scenes/Wins_scene.tscn")
 	
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -74,8 +82,15 @@ func update_interactions():
 func execute_interaction():
 	if all_interactions:
 		var cur_interacion = all_interactions[0]
+		cur_interacion.interact_value = cur_interacion.interact_value + 1
+		if cur_interacion.interact_value == 1:
+			get_parent().get_node("Objects/"+cur_interacion.interact_name+"/after").queue_free()
+			
+		if cur_interacion.interact_value == 2:
+			get_parent().get_node("Objects/"+cur_interacion.interact_name+"/before").show()
+			task += 1
+			
 		match cur_interacion.interact_type:
-			"recycle_bin_scene" : get_tree().change_scene_to_file("res://scenes/recycle_bin.tscn")
-	
-	
-		
+			"growth_tree" : pass
+		$Task_number.text = str("Atividades concluídas: ", str(task).pad_zeros(2), "/"+str(max_task).pad_zeros(2))
+
