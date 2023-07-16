@@ -92,5 +92,6 @@ func execute_interaction():
 			
 		match cur_interacion.interact_type:
 			"growth_tree" : pass
+			"recycle_bin" : pass
 		$Task_number.text = str("Atividades concluídas: ", str(task).pad_zeros(2), "/"+str(max_task).pad_zeros(2))
 

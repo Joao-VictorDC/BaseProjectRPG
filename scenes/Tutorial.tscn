@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cj8jpa2nvgerw"]
+[gd_scene load_steps=7 format=3 uid="uid://cj8jpa2nvgerw"]
 
 [ext_resource type="Script" path="res://script/Tutorial.gd" id="1_usm4a"]
 [ext_resource type="Texture2D" uid="uid://ddc7laic2i264" path="res://assets/GUI/images/menu-background.jpg" id="2_77c7l"]
 [ext_resource type="FontFile" uid="uid://db4k7uakvesrw" path="res://assets/fonts/Minecraft.ttf" id="3_httk2"]
 [ext_resource type="Texture2D" uid="uid://dru0qfwgf7ja0" path="res://assets/GUI/keysword_E.png" id="4_lqchf"]
 [ext_resource type="Texture2D" uid="uid://kt8pjm0of2qc" path="res://assets/GUI/keys_arrows_pictures.png" id="5_3aaiq"]
+[ext_resource type="Texture2D" uid="uid://bw5eh2b2wndu2" path="res://assets/GUI/keyword_esc.png" id="6_c5x42"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -29,18 +30,6 @@ offset_bottom = 64.0
 texture = ExtResource("2_77c7l")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-offset_left = -37.0
-offset_top = 7.0
-offset_right = 36.0
-offset_bottom = 38.0
-alignment = 2
-
-[node name="BackBtn" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "VOLTAR"
-
 [node name="Title" type="Label" parent="."]
 modulate = Color(0.396078, 0.345098, 0.92549, 1)
 self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 1)
@@ -62,11 +51,11 @@ vertical_alignment = 1
 
 [node name="Keyword_E" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 43.0
+offset_left = -25.0001
 offset_top = -92.0
-offset_right = 268.0
+offset_right = 200.0
 offset_bottom = 133.0
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.095, 0.095)
 texture = ExtResource("4_lqchf")
 
 [node name="Keyword_E_text" type="Label" parent="."]
@@ -76,25 +65,27 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 22.0
-offset_top = -20.0
-offset_right = 179.0
-offset_bottom = 9.0
+offset_left = -36.0
+offset_top = -40.0
+offset_right = 94.0
+offset_bottom = 29.0
 grow_horizontal = 2
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.58, 0.58)
 theme_override_fonts/font = ExtResource("3_httk2")
 theme_override_font_sizes/font_size = 20
-text = "E para interagir
+text = "Pressione E para interagir
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Keyword_Arrows" type="TextureRect" parent="."]
-offset_left = -112.0
-offset_top = -92.0
-offset_right = 113.0
-offset_bottom = 133.0
-scale = Vector2(0.3, 0.3)
+layout_mode = 0
+offset_left = -161.0
+offset_top = -111.0
+offset_right = 1839.0
+offset_bottom = 1499.0
+scale = Vector2(0.0550006, 0.0550006)
 texture = ExtResource("5_3aaiq")
 
 [node name="Keyword_Arrows_text" type="Label" parent="."]
@@ -104,18 +95,65 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -132.0
-offset_top = -21.0
-offset_right = 25.0
-offset_bottom = 8.0
+offset_left = -157.0
+offset_top = -34.0
+offset_right = 40.0
+offset_bottom = 12.0
 grow_horizontal = 2
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.541406, 0.541406)
 theme_override_fonts/font = ExtResource("3_httk2")
 theme_override_font_sizes/font_size = 20
-text = "E para interagir
+text = "Use as setas para movimentar-se
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
-[connection signal="pressed" from="VBoxContainer/BackBtn" to="." method="_on_quit_btn_pressed" flags=18]
-[connection signal="pressed" from="VBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = -110.0
+offset_top = 9.0
+offset_right = 107.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Back_Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "VOLTAR"
+
+[node name="Play_Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "INICIAR"
+
+[node name="Keyword_ESC" type="Label" parent="."]
+modulate = Color(0.396078, 0.345098, 0.92549, 1)
+self_modulate = Color(0.0196078, 0.0196078, 0.0196078, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 68.0
+offset_top = -40.0
+offset_right = 198.0
+offset_bottom = 29.0
+grow_horizontal = 2
+scale = Vector2(0.58, 0.58)
+theme_override_fonts/font = ExtResource("3_httk2")
+theme_override_font_sizes/font_size = 20
+text = "Pressione ESC pausar
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -93.0
+offset_right = 589.0
+offset_bottom = 361.0
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("6_c5x42")
+
+[connection signal="pressed" from="HBoxContainer/Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]

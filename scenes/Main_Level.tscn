@@ -19,6 +19,6 @@ layer_1/tile_data = PackedInt32Array(131077, 1769472, 37, 196615, 1769472, 37, 6
 layer_4/tile_data = PackedInt32Array(524301, 1769478, 63, 131089, 1507334, 70, 1114140, 1507334, 70, 1179653, 458758, 49)
 
 [node name="Player" parent="." instance=ExtResource("2_8ulao")]
-position = Vector2(522, 812)
+position = Vector2(309, 638)
 
 [node name="Objects" parent="." instance=ExtResource("4_02akr")]

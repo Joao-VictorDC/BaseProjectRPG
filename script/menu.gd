@@ -11,7 +11,7 @@ func _process(delta):
 
 
 func _on_start_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/Main_Level.tscn")
+	get_tree().change_scene_to_file("res://scenes/Tutorial.tscn")
 
 
 func _on_tutorial_btn_pressed():

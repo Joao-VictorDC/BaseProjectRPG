@@ -85,7 +85,7 @@ radius = 28.0179
 y_sort_enabled = true
 script = ExtResource("1_ydnby")
 anim = NodePath("AnimatedSprite2D")
-max_task = 2
+max_task = 6
 
 [node name="HurtBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 14)
