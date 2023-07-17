@@ -7,7 +7,6 @@ extends CharacterBody2D
 @export var max_speed = 75
 @export var accel = 600
 @export var friction = 600
-@export var max_task: int = 0
 
 @onready var all_interactions = []
 @onready var interaction_label = $Interaction_Component/InteractionLabel
@@ -17,7 +16,6 @@ var task: int = 0
 var input = Vector2.ZERO
 
 func _ready():
-	$Task_number.text = str("Atividades concluídas: ", str(task).pad_zeros(2), "/"+str(max_task).pad_zeros(2))
 	update_interactions()
 	
 
@@ -29,7 +27,7 @@ func _physics_process(delta):
 		execute_interaction()
 		execute_interaction()
 		
-	if task == max_task:
+	if task >= 100:
 		get_tree().change_scene_to_file("res://scenes/Wins_scene.tscn")
 	
 func get_input():
@@ -88,10 +86,10 @@ func execute_interaction():
 			
 		if cur_interacion.interact_value == 2:
 			get_parent().get_node("Objects/"+cur_interacion.interact_name+"/before").show()
-			task += 1
+			task += 18
+			$ProgressBar.value = task
 			
 		match cur_interacion.interact_type:
 			"growth_tree" : pass
 			"recycle_bin" : pass
-		$Task_number.text = str("Atividades concluídas: ", str(task).pad_zeros(2), "/"+str(max_task).pad_zeros(2))
 

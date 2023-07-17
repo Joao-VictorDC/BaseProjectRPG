@@ -1,7 +1,7 @@
 extends Label
 
 var seconds: int = 01
-var minutes: int = 01
+var minutes: int = Global.number
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

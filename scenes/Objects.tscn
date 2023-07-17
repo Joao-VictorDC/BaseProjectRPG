@@ -64,12 +64,12 @@ interact_label = "Aperte E para interagir"
 interact_type = "recycle_bin"
 
 [node name="after" parent="Task_3" instance=ExtResource("2_ic3uq")]
-visible = false
 position = Vector2(-34.6775, -33.0645)
 scale = Vector2(0.806452, 0.806452)
 layer_4/tile_data = PackedInt32Array(65538, 196614, 57, 131073, 131078, 58, 262145, 196614, 65, 131072, 458758, 66, 196610, 458758, 68, 5, 524294, 69, 196611, 131078, 67, 65536, 131078, 67, 196613, 131078, 69)
 
 [node name="before" parent="Task_3" instance=ExtResource("2_ic3uq")]
+visible = false
 position = Vector2(112.097, 351.613)
 scale = Vector2(0.806452, 0.806452)
 layer_0/tile_data = PackedInt32Array(-1703944, 0, 16, -1638408, 0, 18, -1638407, 131072, 18, -1703943, 393216, 16)
