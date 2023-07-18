@@ -131,5 +131,4 @@ layer_4/tile_data = PackedInt32Array(-1769482, 393220, 72, -1638410, 393220, 72,
 
 [node name="before" parent="Task_6" instance=ExtResource("2_ic3uq")]
 visible = false
-position = Vector2(147, 436)
 layer_4/tile_data = PackedInt32Array(-1900555, 262148, 74, -1769482, 786436, 60, -1703944, 1769476, 52, -1703942, 1769476, 52, -1769480, 1441796, 37, -1966089, 1703942, 22)
