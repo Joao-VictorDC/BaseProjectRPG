@@ -786,6 +786,9 @@ texture = ExtResource("2_ubk53")
 5:9/0 = 0
 5:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:9/0/physics_layer_0/angular_velocity = 0.0
+12:3/0 = 0
+12:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+12:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qyodi"]
 resource_name = "Fences"
@@ -2022,6 +2025,7 @@ texture = ExtResource("2_ph083")
 4:74/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5, 16, 3, 16, 5, 29, -3.5, 29)
 12:60/size_in_atlas = Vector2i(4, 4)
 12:60/0 = 0
+12:60/0/y_sort_origin = 17
 12:60/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:60/0/physics_layer_0/angular_velocity = 0.0
 12:60/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5, 17.5, -12.5, 23.5, -8, 32, 7.5, 31.5, 13, 24, 6, 17.5)
@@ -2200,6 +2204,7 @@ texture = ExtResource("3_f64wt")
 3:67/0/physics_layer_0/polygon_0/points = PackedVector2Array(18, -2, 18.5, 19.5, -7.5, 20.5, -28.5, 7, -12.5, -2)
 2:69/size_in_atlas = Vector2i(5, 3)
 2:69/0 = 0
+2:69/0/y_sort_origin = 11
 2:69/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:69/0/physics_layer_0/angular_velocity = 0.0
 1:57/0 = 0

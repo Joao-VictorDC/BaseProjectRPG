@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxdel2c7k4vwj"]
+[gd_scene load_steps=4 format=3 uid="uid://d3infl67xe1k5"]
 
-[ext_resource type="Script" path="res://script/menu.gd" id="1_uc5h4"]
-[ext_resource type="FontFile" uid="uid://db4k7uakvesrw" path="res://assets/fonts/Minecraft.ttf" id="2_4qwrc"]
-[ext_resource type="Texture2D" uid="uid://ddc7laic2i264" path="res://assets/GUI/images/menu-background.jpg" id="2_050uc"]
+[ext_resource type="Script" path="res://scenes/Dificulty.gd" id="1_qy60w"]
+[ext_resource type="Texture2D" uid="uid://ddc7laic2i264" path="res://assets/GUI/images/menu-background.jpg" id="2_6bq23"]
+[ext_resource type="FontFile" uid="uid://db4k7uakvesrw" path="res://assets/fonts/Minecraft.ttf" id="3_77uia"]
 
-[node name="Control2" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -16,7 +16,7 @@ offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
-script = ExtResource("1_uc5h4")
+script = ExtResource("1_qy60w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -24,7 +24,7 @@ offset_left = -160.0
 offset_top = -135.0
 offset_right = 160.0
 offset_bottom = 64.0
-texture = ExtResource("2_050uc")
+texture = ExtResource("2_6bq23")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -37,12 +37,20 @@ offset_bottom = 51.0
 [node name="StartBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-text = "JOGAR"
+focus_neighbor_top = NodePath("../QuitBtn")
+text = "Fácil"
 icon_alignment = 1
 
 [node name="TutorialBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Sair"
+text = "Médio
+"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartBtn")
+text = "Díficil
+"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.396078, 0.345098, 0.92549, 1)
@@ -56,11 +64,12 @@ offset_top = -107.0
 offset_right = 80.0
 offset_bottom = -66.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_4qwrc")
+theme_override_fonts/font = ExtResource("3_77uia")
 theme_override_font_sizes/font_size = 20
-text = "PARK CLEANER"
+text = "Dificuldade"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
-[connection signal="pressed" from="VBoxContainer/TutorialBtn" to="." method="_on_tutorial_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed" flags=18]
+[connection signal="pressed" from="VBoxContainer/TutorialBtn" to="." method="_on_tutorial_btn_pressed" flags=18]
+[connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed" flags=18]
